@@ -1,0 +1,94 @@
+*body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: green;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    background-color: rgba(242, 255, 156, 0.888);
+    border: 3px solid #6dd86d;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+table {
+    background-color: rgba(242, 255, 156, 0.888);
+    border: 3px solid green;
+    width: 700px;
+    margin: 0 auto;
+}
+
+table td {
+    background-color: rgba(54, 183, 49, 0.632);
+    border: 1px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    margin-top: 40px;
+    width: 700px;
+}
+
+.box1 {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sub {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box {
+    margin: 5px;
+    border: 2px outset white;
+}
+
+.button {
+    background-color: #67ed67;
+    border: 1px solid #fff;
+}

@@ -1,0 +1,112 @@
+
+Tú
+Phạm Tuấn Tú
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Entry Form</title>
+    <link rel="stylesheet" href="lab7_bai1.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Order Entry Form</h1>
+    </div>
+    <div class="content">
+        <table>
+            <th colspan="2" style="background-color: rgba(242, 255, 156, 0.888);">
+                Fill in the detials to place an order.
+            </th>
+            <tr>
+                <td>Customer Name:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Product Name:</td>
+                <td>
+                    <select id="productName" name="productName">
+                        <option value="Select">Select</option>
+                        <option value="Monitor">Monitor</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Keyboard">Keyboard</option>
+                        <option value="Printer">Printer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Unit Price($):</td>
+                <td>
+                    <input type="text" id="unitPrice" class="box1" name="unitPrice" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td>
+                    <input type="number" id="quantity" class="box1" name="quantity" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Amount($):</td>
+                <td>
+                    <input type="text" id="amount" class="box1" name="amount" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>Payment Mode:</td>
+                <td>
+                    <select id="paymentMode" name="paymentMode">
+                        <option value="Cash">Cash</option>
+                        <option value="Check">Check</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="sub">
+                <td colspan="2">
+                    <div class="button-container">
+                        <button class="button">Submit</button>
+                        <button class="button">Reset</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        function calculateAmount() {
+            var productName = document.getElementById("productName").value;
+            var quantity = parseInt(document.getElementById("quantity").value);
+            var unitPrice = 0;
+
+            switch (productName) {
+                case "Monitor":
+                    unitPrice = 324.12;
+                    break;
+                case "Mouse":
+                    unitPrice = 75.00;
+                    break;
+                case "Keyboard":
+                    unitPrice = 122.85;
+                    break;
+                case "Printer":
+                    unitPrice = 194.64;
+                    break;
+                default:
+                    unitPrice = 0;
+            }
+
+            var amount = unitPrice * quantity;
+            document.getElementById("unitPrice").value = unitPrice.toFixed(2);
+            document.getElementById("amount").value = amount.toFixed(2);
+        }
+        document.getElementById("productName").addEventListener("change", calculateAmount);
+        document.getElementById("quantity").addEventListener("input", calculateAmount);
+    </script>
+</body>
+
+</html>
